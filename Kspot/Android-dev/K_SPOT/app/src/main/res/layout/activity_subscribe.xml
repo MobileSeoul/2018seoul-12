@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubscribeActivity"
+    android:fitsSystemWindows="true">
+
+    <!--탑바-->
+    <RelativeLayout
+        android:id="@+id/subscribe_act_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <!--백 버튼-->
+        <RelativeLayout
+            android:id="@+id/subscribe_act_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/category_back_arrow"
+                android:layout_margin="8dp"/>
+        </RelativeLayout>
+
+        <!--구독-->
+        <TextView
+            android:id="@+id/tv_subscripe_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="구독"
+            android:textSize="18dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanumsquareotf_bold"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <!--커스텀 탭바 레이아웃-->
+    <RelativeLayout
+        android:id="@+id/subscribe_act_tab_rl"
+        android:layout_below="@+id/subscribe_act_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+        <!--연예인탭 버튼-->
+        <RelativeLayout
+            android:id="@+id/subscribe_act_celeb_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/subscribe_act_temp_view">
+            <TextView
+                android:id="@+id/subscribe_act_celeb_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="연예인"
+                android:textColor="#40D39F"
+                android:textSize="16dp"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <!--그냥 가운데 갈라놓으려고 넣음!-->
+        <View
+            android:id="@+id/subscribe_act_temp_view"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"/>
+
+        <!--방송탭 버튼-->
+        <RelativeLayout
+            android:id="@+id/subscribe_act_broadcast_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/subscribe_act_temp_view">
+            <TextView
+                android:id="@+id/subscribe_act_broadcast_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="방송"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+        <!--tab underbar-->
+        <View
+            android:id="@+id/subscribe_act_tab_line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_toLeftOf="@+id/subscribe_act_temp_view"
+            android:layout_alignParentBottom="true"
+            android:background="#40D39F"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="visible"
+        android:id="@+id/subscribe_act_rv"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/subscribe_act_tab_rl"></android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/subscribe_act_noting_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/subscribe_act_tab_rl">
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:text="구독 결과 없음"
+            android:textColor="#D8D8D8"
+            android:textSize="24dp" />
+
+    </RelativeLayout>
+
+    
+
+
+
+
+</RelativeLayout>

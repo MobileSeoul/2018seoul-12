@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView
+        android:src="@drawable/google_map_chat_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+        <TextView
+            android:id="@+id/map_info_window_title"
+            android:text="용산구"
+            android:textSize="14dp"
+            android:fontFamily="@font/nanumsquareotf_bold"
+            android:textColor="#323232"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:id="@+id/map_info_window_content"
+            android:text="한강대로23길 55"
+            android:textSize="12dp"
+            android:fontFamily="@font/nanumsquareotf_light"
+            android:textColor="#323232"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

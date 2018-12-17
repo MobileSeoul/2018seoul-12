@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KSpot.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+				<key>dateExpires</key>
+				<string>2019. 8. 28.</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+						<key>dateExpires</key>
+						<string>2019. 8. 28.</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>Alamofire.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y4XABUQ539</string>
+						<key>name</key>
+						<string>Sujin Kang</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+						<key>dateExpires</key>
+						<string>2019. 8. 28.</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>Bolts.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y4XABUQ539</string>
+						<key>name</key>
+						<string>Sujin Kang</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+						<key>dateExpires</key>
+						<string>2019. 8. 28.</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>FBSDKCoreKit.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y4XABUQ539</string>
+						<key>name</key>
+						<string>Sujin Kang</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+						<key>dateExpires</key>
+						<string>2019. 8. 28.</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>FBSDKLoginKit.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y4XABUQ539</string>
+						<key>name</key>
+						<string>Sujin Kang</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+						<key>dateExpires</key>
+						<string>2019. 8. 28.</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>FBSDKShareKit.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y4XABUQ539</string>
+						<key>name</key>
+						<string>Sujin Kang</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+						<key>dateExpires</key>
+						<string>2019. 8. 28.</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>FacebookCore.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y4XABUQ539</string>
+						<key>name</key>
+						<string>Sujin Kang</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+						<key>dateExpires</key>
+						<string>2019. 8. 28.</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>FacebookLogin.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y4XABUQ539</string>
+						<key>name</key>
+						<string>Sujin Kang</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+						<key>dateExpires</key>
+						<string>2019. 8. 28.</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>FacebookShare.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y4XABUQ539</string>
+						<key>name</key>
+						<string>Sujin Kang</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+						<key>dateExpires</key>
+						<string>2019. 8. 28.</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>ImageSlideshow.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y4XABUQ539</string>
+						<key>name</key>
+						<string>Sujin Kang</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+						<key>dateExpires</key>
+						<string>2019. 8. 28.</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>Kingfisher.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y4XABUQ539</string>
+						<key>name</key>
+						<string>Sujin Kang</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+						<key>dateExpires</key>
+						<string>2019. 8. 28.</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>SnapKit.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y4XABUQ539</string>
+						<key>name</key>
+						<string>Sujin Kang</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0812DDCC738B20D54A6C9FFA94274095AC3570FE</string>
+						<key>dateExpires</key>
+						<string>2019. 8. 28.</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>SwiftyJSON.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y4XABUQ539</string>
+						<key>name</key>
+						<string>Sujin Kang</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>Y4XABUQ539.kangsujin.KSpot</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>Y4XABUQ539</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>Y4XABUQ539.kangsujin.KSpot</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>KSpot.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>ec5107d6-2547-46b3-8e5a-7394abbbdf31</string>
+				<key>name</key>
+				<string>seoul2</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>Y4XABUQ539</string>
+				<key>name</key>
+				<string>Sujin Kang</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

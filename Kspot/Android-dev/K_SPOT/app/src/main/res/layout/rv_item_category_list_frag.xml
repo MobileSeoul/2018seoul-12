@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/category_list_fragment_rv_item_rl"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="89dp"
+    android:background="?android:selectableItemBackground">
+
+
+    <RelativeLayout
+        android:id="@+id/category_list_fragment_rv_item_num_box"
+        android:layout_width="26dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp">
+        <TextView
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:id="@+id/category_list_fragment_rv_item_num_tv"
+            android:layout_width="26dp"
+            android:layout_height="20dp"
+            android:text="111"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:textSize="14dp"
+            android:textColor="#414141"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/category_list_fragment_rv_item_image_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/category_list_fragment_rv_item_num_box"
+        android:layout_centerVertical="true"
+        android:background="@drawable/category_list_image_box"
+        android:layout_marginLeft="8dp">
+
+        <ImageView
+            android:id="@+id/category_list_fragment_rv_item_image_iv"
+            android:layout_width="101dp"
+            android:layout_height="66dp"
+            android:scaleType="centerCrop"
+            android:layout_margin="0.5dp"
+            />
+
+    </RelativeLayout>
+    <!--android:background="@drawable/categoty_entertainer_image_box"-->
+
+    <TextView
+        android:id="@+id/category_list_fragment_rv_item_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="방탄소년단"
+        android:fontFamily="@font/nanumsquareotf_bold"
+        android:textSize="15dp"
+        android:layout_toRightOf="@+id/category_list_fragment_rv_item_image_rl"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="19dp"
+        android:textColor="#5E5E5E"/>
+
+    <TextView
+        android:id="@+id/category_list_fragment_rv_item_subscriber_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="구독자 "
+        android:fontFamily="@font/nanumsquareotf_regular"
+        android:textSize="10dp"
+        android:layout_toRightOf="@+id/category_list_fragment_rv_item_image_rl"
+        android:layout_below="@+id/category_list_fragment_rv_item_name_tv"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="13dp"
+        android:textColor="#C5C5C5"/>
+
+    <TextView
+        android:id="@+id/category_list_fragment_rv_item_subscriber_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25만"
+        android:fontFamily="@font/nanumsquareotf_regular"
+        android:textSize="10dp"
+        android:layout_toRightOf="@+id/category_list_fragment_rv_item_subscriber_tv"
+        android:layout_below="@+id/category_list_fragment_rv_item_name_tv"
+        android:layout_marginTop="13dp"
+        android:textColor="#C5C5C5"/>
+
+    <TextView
+        android:id="@+id/category_list_fragment_rv_item_post_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="게시물 "
+        android:fontFamily="@font/nanumsquareotf_regular"
+        android:textSize="10dp"
+        android:layout_toRightOf="@+id/category_list_fragment_rv_item_subscriber_num_tv"
+        android:layout_below="@+id/category_list_fragment_rv_item_name_tv"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="13dp"
+        android:textColor="#C5C5C5"/>
+
+    <TextView
+        android:id="@+id/category_list_fragment_rv_item_post_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20개"
+        android:fontFamily="@font/nanumsquareotf_regular"
+        android:textSize="10dp"
+        android:layout_toRightOf="@+id/category_list_fragment_rv_item_post_tv"
+        android:layout_below="@+id/category_list_fragment_rv_item_name_tv"
+        android:layout_marginTop="13dp"
+        android:textColor="#C5C5C5"/>
+
+
+    <RelativeLayout
+        android:id="@+id/category_list_fragment_rv_item_subscribe_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/category_list_fragment_rv_item_subscribe_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/category_list_sub_btn"
+            android:layout_margin="6dp"
+            />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/category_list_fragment_rv_item_bottom_line"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:background="#E0E0E0"
+        />
+
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:background="#E0E0E0"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+</RelativeLayout>

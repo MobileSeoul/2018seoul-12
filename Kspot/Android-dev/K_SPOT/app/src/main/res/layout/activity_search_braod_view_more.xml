@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchBraodViewMoreActivity"
+    android:fitsSystemWindows="true">
+
+    <!--상단탭-->
+    <RelativeLayout
+
+        android:id="@+id/search_broad_view_more_act_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        >
+        <!--백버튼-->
+        <RelativeLayout
+            android:id="@+id/search_broad_view_more_act_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_back_arrow"
+                android:layout_margin="8dp"/>
+        </RelativeLayout>
+
+        <!--검색결과와 아이콘-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+            <!--검색 결과 text-->
+            <TextView
+                android:id="@+id/search_broad_view_more_act_result_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="방탄 검색결과"
+                android:textSize="15dp"
+                android:textColor="#5E5E5E"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#FFFFFF"
+            android:elevation="3dp"
+            android:layout_alignParentBottom="true"></View>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/search_broad_view_more_act_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/search_broad_view_more_act_top_bar"
+        android:text="연예인 / 방송"
+        android:textColor="#5E5E5E"
+        android:textSize="16dp"
+        android:fontFamily="@font/nanumsquareotf_bold"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_broad_view_more_act_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/search_broad_view_more_act_tv"
+        ></android.support.v7.widget.RecyclerView>
+
+    <!--&lt;!&ndash;플로팅버튼&ndash;&gt;-->
+    <!--<ImageView-->
+        <!--android:id="@+id/search_broad_view_more_act_filter"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:src="@drawable/filter_floating_btn"-->
+        <!--android:layout_marginBottom="20dp"/>-->
+
+    <!--&lt;!&ndash;필터 뷰&ndash;&gt;-->
+    <!--<RelativeLayout-->
+        <!--android:visibility="gone"-->
+        <!--android:id="@+id/search_broad_view_more_act_filter_on_rl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#77000000">-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/search_broad_view_more_act_filter_cancle_btn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_above="@+id/search_broad_view_more_act_filter_view_rl"-->
+            <!--&gt;</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/search_broad_view_more_act_filter_x_btn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_above="@+id/search_broad_view_more_act_filter_view_rl"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="14dp"-->
+            <!--&gt;-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/filter_x_btn"-->
+                <!--android:layout_margin="8dp"/>-->
+
+        <!--</RelativeLayout>-->
+
+        <!--&lt;!&ndash;인기순 + 최신순 + 버튼 &ndash;&gt;-->
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/search_broad_view_more_act_filter_view_rl"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="270dp"-->
+            <!--android:layout_alignParentBottom="true">-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="202dp"-->
+                <!--android:layout_above="@+id/search_broad_view_more_act_filter_enter_btn"-->
+                <!--android:background="#FFFFFF">-->
+
+                <!--&lt;!&ndash;인기순 최신순&ndash;&gt;-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/search_broad_view_more_act_filter_top_bar"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="80dp"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--&lt;!&ndash;인기순 버튼&ndash;&gt;-->
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/search_broad_view_more_act_filter_popularity_btn"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="인기순"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:textSize="17dp"-->
+                            <!--android:textColor="#40D39F"-->
+                            <!--android:fontFamily="@font/nanumsquareotf_regular_normal"/>-->
+                    <!--</RelativeLayout>-->
+
+                    <!--&lt;!&ndash;가운데 벽&ndash;&gt;-->
+                    <!--<RelativeLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent">-->
+                        <!--<View-->
+                            <!--android:layout_width="0.25dp"-->
+                            <!--android:layout_height="20dp"-->
+                            <!--android:background="#C0C0C0"-->
+                            <!--android:layout_centerVertical="true"-->
+                            <!--&gt;</View>-->
+
+                    <!--</RelativeLayout>-->
+
+
+                    <!--&lt;!&ndash;최신순 버튼&ndash;&gt;-->
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/search_broad_view_more_act_filter_new_btn"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="최신순"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:textSize="17dp"-->
+                            <!--android:textColor="#C0C0C0"-->
+                            <!--android:fontFamily="@font/nanumsquareotf_regular_normal"/>-->
+                    <!--</RelativeLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <!--&lt;!&ndash;인기순 최신순 밑 짝대기&ndash;&gt;-->
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0.25dp"-->
+                    <!--android:background="#C0C0C0"-->
+                    <!--android:layout_marginLeft="16dp"-->
+                    <!--android:layout_marginRight="16dp"-->
+                    <!--android:layout_below="@+id/search_broad_view_more_act_filter_top_bar"></View>-->
+
+                <!--&lt;!&ndash;맛집 + 카페 +명소 + 기타&ndash;&gt;-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="120dp"-->
+                    <!--android:layout_below="@+id/search_broad_view_more_act_filter_top_bar"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/search_broad_view_more_act_filter_restaurant_btn"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/filter_restaurant_btn_gray"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_weight="1"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/search_broad_view_more_act_filter_cafe_btn"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/filter_cafe_btn_gray"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_weight="1"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/search_broad_view_more_act_filter_hotplace_btn"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/filter_hotplace_btn_gray"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_weight="1"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/search_broad_view_more_act_filter_etc_btn"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/filter_etc_btn_gray"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_weight="1"/>-->
+                <!--</LinearLayout>-->
+
+            <!--</RelativeLayout>-->
+
+            <!--&lt;!&ndash;확인버튼&ndash;&gt;-->
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/search_broad_view_more_act_filter_enter_btn"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:background="#40D39F">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="확인"-->
+                    <!--android:textColor="#FFFFFF"-->
+                    <!--android:textSize="19dp"-->
+                    <!--android:fontFamily="@font/nanumsquareotf_regular_normal"-->
+                    <!--android:layout_centerInParent="true"/>-->
+            <!--</RelativeLayout>-->
+        <!--</RelativeLayout>-->
+
+
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>

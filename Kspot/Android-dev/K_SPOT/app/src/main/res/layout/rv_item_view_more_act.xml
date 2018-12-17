@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/xx"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/view_more_act_rv_item_card_view"
+        android:layout_width="97dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:foreground="?android:selectableItemBackground"
+        android:background="@drawable/rv_item_spot_view_more_act_box_shape"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/view_more_act_rv_item_broadcast_iv"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:src="@drawable/category_list_blackpink_img"
+                android:background="@drawable/view_more_act_rv_item_circle_shape"
+                android:elevation="1dp"
+                />
+
+            <TextView
+                android:id="@+id/view_more_act_rv_item_broadcast_title_tv"
+                android:layout_below="@+id/view_more_act_rv_item_broadcast_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="방탄소년단"
+                android:textColor="#323232"
+                android:textSize="9dp"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="9dp"/>
+
+            <ImageView
+                android:id="@+id/view_more_act_rv_item_subscribe_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/view_more_act_rv_item_broadcast_title_tv"
+                android:src="@drawable/category_list_unsub_btn"/>
+
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

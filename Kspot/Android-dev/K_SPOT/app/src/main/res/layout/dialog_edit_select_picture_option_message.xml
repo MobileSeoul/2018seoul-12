@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="296dp"
+    android:layout_height="146dp"
+    android:background="@drawable/dialog_shape">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/btn_edit_picture_option_dialog_album"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_edit_picture_option_dialog_album"
+                android:layout_centerInParent="true"
+                android:text="앨범에서 사진 선택"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#414141"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                android:textSize="14dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:background="#E0E0E0"/>
+        <RelativeLayout
+            android:id="@+id/btn_edit_picture_option_dialog_default"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_edit_picture_option_dialog_default"
+                android:layout_centerInParent="true"
+                android:text="기본 이미지 선택"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#414141"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                android:textSize="14dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:background="#E0E0E0"/>
+        <RelativeLayout
+            android:id="@+id/btn_edit_picture_option_dialog_cancel"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_edit_picture_option_dialog_cancel"
+                android:layout_centerInParent="true"
+                android:text="취소"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#40D39F"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                android:textSize="14dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

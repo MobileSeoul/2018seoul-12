@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/search_result_act_rv_item_btn"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/search_result_act_rv_item_image_iv"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:src="@color/colorAccent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/search_result_act_rv_item_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="방탄소년단"
+            android:fontFamily="@font/nanumsquareotf_bold"
+            android:textSize="15dp"
+            android:layout_toRightOf="@+id/search_result_act_rv_item_image_iv"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="19dp"
+            android:textColor="#5E5E5E"/>
+
+        <TextView
+            android:id="@+id/search_result_act_rv_item_subscriber_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="구독자 "
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:textSize="10dp"
+            android:layout_toRightOf="@+id/search_result_act_rv_item_image_iv"
+            android:layout_below="@+id/search_result_act_rv_item_name_tv"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="13dp"
+            android:textColor="#C5C5C5"/>
+
+        <TextView
+            android:id="@+id/search_result_act_rv_item_subscriber_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25만"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:textSize="10dp"
+            android:layout_toRightOf="@+id/search_result_act_rv_item_subscriber_tv"
+            android:layout_below="@+id/search_result_act_rv_item_name_tv"
+            android:layout_marginTop="13dp"
+            android:textColor="#C5C5C5"/>
+
+        <TextView
+            android:id="@+id/search_result_act_rv_item_post_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="게시물 "
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:textSize="10dp"
+            android:layout_toRightOf="@+id/search_result_act_rv_item_subscriber_num_tv"
+            android:layout_below="@+id/search_result_act_rv_item_name_tv"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="13dp"
+            android:textColor="#C5C5C5"/>
+
+        <TextView
+            android:id="@+id/search_result_act_rv_item_post_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20개"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:textSize="10dp"
+            android:layout_toRightOf="@+id/search_result_act_rv_item_post_tv"
+            android:layout_below="@+id/search_result_act_rv_item_name_tv"
+            android:layout_marginTop="13dp"
+            android:textColor="#C5C5C5"/>
+
+        <RelativeLayout
+            android:id="@+id/search_result_act_rv_item_subscribe_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/search_result_act_rv_item_subscribe_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/category_list_unsub_btn"
+                android:layout_margin="6dp"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E0E0E0"
+            android:layout_below="@+id/search_result_act_rv_item_image_iv"
+            android:layout_marginTop="10dp"
+            ></View>
+
+    </RelativeLayout>
+
+</RelativeLayout>

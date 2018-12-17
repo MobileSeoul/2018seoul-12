@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent" android:layout_height="100dp"
+    android:layout_marginBottom="16dp"
+    android:foreground="?android:selectableItemBackground"
+    android:id="@+id/rv_item_categoty_detail_relative_spot_whole_btn">
+    <ImageView
+        android:id="@+id/rv_item_categoty_detail_relative_spot_img"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/rv_item_categoty_detail_relative_spot_title"
+            android:text="지역 명"
+            android:textSize="16dp"
+            android:fontFamily="@font/nanumsquareotf_bold"
+            android:textColor="#323232"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/rv_item_categoty_detail_relative_spot_content"
+            android:text="설명"
+            android:textSize="13dp"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:textColor="#707070"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+            <ImageView
+                android:src="@drawable/category_detail_map_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:id="@+id/rv_item_categoty_detail_relative_spot_address"
+                android:text=" · "
+                android:textSize="12dp"
+                android:fontFamily="@font/nanumsquareotf_regular"
+                android:textColor="#C0C0C0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <ImageView
+                android:src="@drawable/category_detail_scrab_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:id="@+id/rv_item_categoty_detail_relative_spot_like_cnt"
+                android:text="-"
+                android:textSize="12dp"
+                android:fontFamily="@font/nanumsquareotf_regular"
+                android:textColor="#C0C0C0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

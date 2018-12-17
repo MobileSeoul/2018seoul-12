@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:elevation="1dp"
+    android:layout_width="match_parent"
+    android:layout_height="36dp">
+
+    <RelativeLayout
+        android:id="@+id/celebrity_tab_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/celebrity_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/nanumsquareotf_bold"
+            android:text="연예인"
+            android:textColor="#40D39F"
+            android:textSize="16dp" />
+
+        <View
+            android:visibility="invisible"
+            android:id="@+id/celebrity_underbar_line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#40D39F" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/broadcast_tab_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/broadcast_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/nanumsquareotf_bold"
+            android:text="방송"
+            android:textColor="#414141"
+            android:textSize="16dp" />
+
+        <View
+            android:id="@+id/broadcast_underbar_line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#40D39F"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--탑바-->
+    <RelativeLayout
+        android:id="@+id/my_page_frag_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <!--번역 버튼-->
+        <RelativeLayout
+            android:background="?android:selectableItemBackground"
+            android:id="@+id/my_page_frag_translate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_translation_icon"
+                android:layout_margin="8dp"/>
+        </RelativeLayout>
+
+        <!--탑 바 마이페이지-->
+        <TextView
+            android:id="@+id/tv_my_page_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="마이페이지"
+            android:textSize="18dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanumsquareotf_bold"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <!--내정보 bar-->
+    <RelativeLayout
+        android:id="@+id/my_page_frag_my_info_rl"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/my_page_frag_top_bar">
+
+        <!--내 얼굴-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/my_page_frag_my_info_iv"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@color/colorAccent"
+            android:layout_marginLeft="16dp"/>
+
+        
+        <!--큐티문어 고객님, 안녕하세요-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/my_page_frag_my_info_iv"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/my_page_frag_my_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="큐티문어"
+                android:textColor="#414141"
+                android:textSize="16dp"
+                android:fontFamily="@font/nanumsquareotf_bold"/>
+
+            <TextView
+                android:id="@+id/tv_my_page_hello_01_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/my_page_frag_my_name_tv"
+                android:text=" 고객님,"
+                android:textColor="#414141"
+                android:textSize="16dp"
+                android:fontFamily="@font/nanumsquareotf_bold"/>
+
+            <TextView
+                android:id="@+id/tv_my_page_hello_02_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안녕하세요!"
+                android:layout_below="@+id/my_page_frag_my_name_tv"
+                android:textSize="16dp"
+                android:textColor="#414141"
+                android:fontFamily="@font/nanumsquareotf_regular"
+                android:layout_marginTop="3dp"/>
+        </RelativeLayout>
+        
+        <!--로그아웃 버튼-->
+        <RelativeLayout
+            android:id="@+id/my_page_frag_logout_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp">
+
+            <ImageView
+                android:id="@+id/iv_my_page_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/my_page_frag_logout_btn" />
+        </RelativeLayout>
+        
+
+
+
+    </RelativeLayout>
+    
+    <!--내구독 box-->
+    <RelativeLayout
+        android:id="@+id/my_page_frag_my_subscribe_box"
+        android:layout_width="match_parent"
+        android:layout_height="241dp"
+        android:layout_below="@+id/my_page_frag_my_info_rl"
+        android:layout_marginTop="20dp"
+        android:background="#F5F5F5">
+
+        <!--내 구독 + 더보기 btn-->
+        <RelativeLayout
+            android:id="@+id/my_page_frag_my_subscribe_rl"
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+
+            <TextView
+                android:id="@+id/tv_my_page_my_subscript_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 구독"
+                android:layout_centerVertical="true"
+                android:textColor="#414141"
+                android:textSize="16dp"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                android:layout_marginLeft="16dp"/>
+
+            <!--내 구독 더보기 btn-->
+            <RelativeLayout
+                android:id="@+id/my_page_frag_my_subscribe_view_more_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp">
+                <TextView
+                    android:id="@+id/tv_my_page_more_my_subscript"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="더보기"
+                    android:textSize="15dp"
+                    android:textColor="#40D39F"
+                    android:fontFamily="@font/nanumsquareotf_regular"
+                    android:layout_margin="8dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--내 구독 리사이클러 뷰-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_page_frag_my_subscribe_rv"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="168dp"
+            android:layout_below="@+id/my_page_frag_my_subscribe_rl"/>
+    </RelativeLayout>
+
+    <!--스크랩-->
+    <RelativeLayout
+        android:background="?android:selectableItemBackground"
+        android:id="@+id/my_page_frag_scrab_bar_btn"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_below="@+id/my_page_frag_my_subscribe_box">
+
+        <TextView
+            android:id="@+id/tv_my_page_scrab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="스크랩"
+            android:textColor="#414141"
+            android:textSize="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/nanumsquareotf_bold"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mypage_right_arrow_btn"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:background="#858585"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+    <!--회원 정보 수정-->
+    <RelativeLayout
+        android:background="?android:selectableItemBackground"
+        android:id="@+id/my_page_frag_change_my_info_bar_btn"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_below="@+id/my_page_frag_scrab_bar_btn">
+
+        <TextView
+            android:id="@+id/tv_my_page_edit_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원정보 수정"
+            android:textColor="#414141"
+            android:textSize="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/nanumsquareotf_bold"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mypage_right_arrow_btn"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:background="#858585"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

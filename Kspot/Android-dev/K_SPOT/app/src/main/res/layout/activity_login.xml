@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="99dp"
+            android:src="@drawable/login_img" />
+
+        <TextView
+            android:id="@+id/login_act_hi_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:text="안녕하세요!"
+            android:textColor="#323232"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/login_act_plz_login_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/nanumsquareotf_bold"
+            android:text="로그인을 해주세요 :)"
+            android:textColor="#323232"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/kakao_custom_login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="48dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kakao_login" />
+
+        <com.kakao.usermgmt.LoginButton
+            android:id="@+id/kakao_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"></com.kakao.usermgmt.LoginButton>
+
+        <ImageView
+            android:id="@+id/login_act_facebook_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="22dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/facebook_login_btn" />
+
+        <ImageView
+            android:id="@+id/login_act_google_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="22dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/google_login_btn" />
+
+        <RelativeLayout
+            android:id="@+id/temp_login_act_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="54dp"
+            android:background="?android:selectableItemBackground">
+
+            <TextView
+                android:id="@+id/temp_login_act_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                android:text="임시로그인 >"
+                android:textColor="#40D39F"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/login_act_freepass_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:background="?android:selectableItemBackground"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/login_act_freepass_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                android:text="건너뛰기 >"
+                android:textColor="#40D39F"
+                android:textSize="18dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

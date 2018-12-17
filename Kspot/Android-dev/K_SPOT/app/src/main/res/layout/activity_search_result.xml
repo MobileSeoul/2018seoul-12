@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true"
+    tools:context=".SearchResultActivity">
+
+    <ScrollView
+        android:id="@+id/search_result_act_all_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_result_act_top_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--연예인 방송 rl-->
+            <RelativeLayout
+                android:id="@+id/search_result_act_celeb_borad_all_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--연예인 방송 단-->
+                <RelativeLayout
+                    android:id="@+id/search_result_act_celeb_borad_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/search_result_act_celeb_borad_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/nanumsquareotf_bold"
+                        android:text="연예인 / 방송"
+                        android:textColor="#5E5E5E"
+                        android:textSize="16dp" />
+
+                    <!--더보기 버튼-->
+                    <RelativeLayout
+                        android:id="@+id/search_result_act_celeb_borad_see_more_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp">
+
+                        <TextView
+                            android:id="@+id/search_result_act_celeb_borad_see_more_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/nanumsquareotf_bold"
+                            android:text="더보기"
+                            android:textColor="#40D39F"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <!--연예인 방송 단 리사이클러뷰-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/search_result_act_celeb_borad_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/search_result_act_celeb_borad_rl"
+                    android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+
+                <View
+                    android:id="@+id/search_result_act_celeb_borad_under_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/search_result_act_celeb_borad_rv"
+                    android:background="#F5F5F5"></View>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/search_result_act_spot_all_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <!--장소단-->
+                <RelativeLayout
+                    android:id="@+id/search_result_act_spot_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/search_result_act_spot_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/nanumsquareotf_bold"
+                        android:text="장소"
+                        android:textColor="#5E5E5E"
+                        android:textSize="16dp" />
+
+                    <!--더보기 버튼-->
+                    <RelativeLayout
+                        android:id="@+id/search_result_act_spot_see_more_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp">
+
+                        <TextView
+                            android:id="@+id/search_result_act_spot_see_more_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/nanumsquareotf_bold"
+                            android:text="더보기"
+                            android:textColor="#40D39F"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <!--장소단 리사이클러뷰-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/search_result_act_spot_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/search_result_act_spot_rl"
+                    android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+
+                <View
+                    android:id="@+id/search_result_act_spot_under_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/search_result_act_spot_rv"
+                    android:background="#F5F5F5"></View>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/search_result_act_event_all_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--이벤트단-->
+                <RelativeLayout
+                    android:id="@+id/search_result_act_event_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/search_result_act_event_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/nanumsquareotf_bold"
+                        android:text="이벤트"
+                        android:textColor="#5E5E5E"
+                        android:textSize="16dp" />
+
+                    <!--더보기 버튼-->
+                    <RelativeLayout
+                        android:id="@+id/search_result_act_event_see_more_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp">
+
+                        <TextView
+                            android:id="@+id/search_result_act_event_see_more_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/nanumsquareotf_bold"
+                            android:text="더보기"
+                            android:textColor="#40D39F"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <!--이벤트단 리사이클러뷰-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/search_result_act_event_rv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/search_result_act_event_rl"
+                    android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@+id/search_result_act_event_rv"
+                    android:background="#F5F5F5"></View>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/search_result_act_no_search_result_rl"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/search_result_act_no_search_result_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색 결과 없음"
+            android:layout_centerInParent="true"
+            android:textSize="30dp"
+            android:textColor="@color/searchgray"
+            android:fontFamily="@font/nanumsquareotf_bold"/>
+    </RelativeLayout>
+
+    <!--상단탭-->
+    <RelativeLayout
+        android:id="@+id/search_result_act_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <!--백버튼-->
+        <RelativeLayout
+            android:id="@+id/search_result_act_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@drawable/main_back_arrow" />
+        </RelativeLayout>
+
+        <!--검색결과와 아이콘-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <!--이미지 버튼-->
+            <ImageView
+                android:id="@+id/search_result_act_result_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_page_search_icon"
+                android:tint="#5E5E5E"
+                />
+            <!--검색 결과 text-->
+            <TextView
+                android:id="@+id/search_result_act_result_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/search_result_act_result_iv"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                android:text=""
+                android:textColor="#5E5E5E"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF"
+            android:elevation="3dp"></View>
+
+    </RelativeLayout>
+</RelativeLayout>

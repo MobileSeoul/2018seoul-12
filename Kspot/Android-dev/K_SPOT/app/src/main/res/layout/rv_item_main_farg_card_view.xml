@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/xx"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <android.support.v7.widget.CardView
+        android:foreground="?android:selectableItemBackground"
+        android:id="@+id/main_frag_rv_item_card_view"
+        android:layout_width="252dp"
+        android:layout_height="261dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="1dp"
+        card:cardCornerRadius="20dp"
+        android:layout_marginBottom="2dp"
+        android:elevation="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/main_frag_rv_item_card_view_place_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginRight="32dp"
+                android:text="셀러브리티를 만나는 \n 가장 새롭게 놀라운 경험"
+                android:textColor="#414141"
+                android:lineSpacingExtra="7dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textSize="15dp"
+                android:fontFamily="@font/nanumsquareotf_extra_bold"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/main_frag_rv_item_card_view_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:text="SMTOWN 코엑스아티움"
+                android:textColor="#5E5E5E"
+                android:textSize="13dp"
+                android:layout_marginRight="32dp"
+                android:layout_below="@+id/main_frag_rv_item_card_view_place_tv"
+                android:fontFamily="@font/nanumsquareotf_regular"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"/>
+
+            <ImageView
+                android:id="@+id/main_frag_rv_item_card_view_place_iv"
+                android:layout_width="match_parent"
+                android:layout_marginTop="21dp"
+                android:layout_height="158dp"
+                android:src="@color/colorAccent"
+                android:scaleType="fitXY"
+                android:layout_alignParentBottom="true"/>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

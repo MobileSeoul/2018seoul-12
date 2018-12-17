@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareOTFRegular.otf">
+            <string>NanumSquareOTFR</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="PlaceFilterView" id="iN0-l3-epB" customClass="PlaceFilterView" customModule="KSpot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Tg-Dk-51X">
+                    <rect key="frame" x="0.0" y="289" width="320" height="207"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVl-YF-Oa6" customClass="FilterToggleBtn" customModule="KSpot" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="31.5" width="160" height="32"/>
+                            <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="18"/>
+                            <state key="normal" title="인기순">
+                                <color key="titleColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqz-hi-C5g" customClass="FilterToggleBtn" customModule="KSpot" customModuleProvider="target">
+                            <rect key="frame" x="160" y="31" width="160" height="32"/>
+                            <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="18"/>
+                            <state key="normal" title="최신순">
+                                <color key="titleColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTC-Vd-SOg">
+                            <rect key="frame" x="159.5" y="37.5" width="1" height="20"/>
+                            <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="78j-La-Q9A"/>
+                                <constraint firstAttribute="width" constant="1" id="KHz-eG-EPL"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEo-uB-VCL">
+                            <rect key="frame" x="15" y="93" width="290" height="1"/>
+                            <color key="backgroundColor" red="0.75294117650000003" green="0.75294117650000003" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="fvb-rK-IsI"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="E3U-ya-Y3d">
+                            <rect key="frame" x="35" y="124.5" width="250" height="65.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJG-7X-Tgg">
+                                    <rect key="frame" x="0.0" y="0.0" width="59.5" height="65.5"/>
+                                    <state key="normal" image="map_filter_restaurant_gray"/>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCl-TB-oHS">
+                                    <rect key="frame" x="63.5" y="0.0" width="59.5" height="65.5"/>
+                                    <state key="normal" image="map_filter_cafe_gray"/>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIa-hN-pVL">
+                                    <rect key="frame" x="127" y="0.0" width="59.5" height="65.5"/>
+                                    <state key="normal" image="map_filter_hotplace_gray"/>
+                                </button>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3a-gS-6DK">
+                                    <rect key="frame" x="190.5" y="0.0" width="59.5" height="65.5"/>
+                                    <state key="normal" image="map_filter_etc_gray"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="65.5" id="ZKo-BD-cmR"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="207" id="B0D-w2-y9u"/>
+                        <constraint firstItem="oEo-uB-VCL" firstAttribute="top" secondItem="Iqz-hi-C5g" secondAttribute="bottom" constant="30" id="C61-PG-IbB"/>
+                        <constraint firstItem="CTC-Vd-SOg" firstAttribute="centerX" secondItem="9Tg-Dk-51X" secondAttribute="centerX" id="CKb-9Z-LPT"/>
+                        <constraint firstItem="Iqz-hi-C5g" firstAttribute="centerY" secondItem="CTC-Vd-SOg" secondAttribute="centerY" id="GkX-91-cKF"/>
+                        <constraint firstItem="NVl-YF-Oa6" firstAttribute="width" secondItem="9Tg-Dk-51X" secondAttribute="width" multiplier="1:2" id="Jv0-Ow-SgL"/>
+                        <constraint firstAttribute="trailing" secondItem="E3U-ya-Y3d" secondAttribute="trailing" constant="35" id="Ple-SO-3gt"/>
+                        <constraint firstItem="Iqz-hi-C5g" firstAttribute="top" secondItem="9Tg-Dk-51X" secondAttribute="top" constant="31" id="QGo-DM-4Ht"/>
+                        <constraint firstItem="oEo-uB-VCL" firstAttribute="leading" secondItem="9Tg-Dk-51X" secondAttribute="leading" constant="15" id="W2b-Sa-STY"/>
+                        <constraint firstItem="E3U-ya-Y3d" firstAttribute="leading" secondItem="9Tg-Dk-51X" secondAttribute="leading" constant="35" id="XF0-II-vPd"/>
+                        <constraint firstItem="CTC-Vd-SOg" firstAttribute="centerY" secondItem="NVl-YF-Oa6" secondAttribute="centerY" id="aC0-g9-daa"/>
+                        <constraint firstAttribute="trailing" secondItem="oEo-uB-VCL" secondAttribute="trailing" constant="15" id="bb2-5I-3Gr"/>
+                        <constraint firstItem="E3U-ya-Y3d" firstAttribute="top" secondItem="oEo-uB-VCL" secondAttribute="bottom" constant="30.5" id="xY6-mJ-8hz"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMj-KG-yJY">
+                    <rect key="frame" x="0.0" y="496" width="320" height="72"/>
+                    <color key="backgroundColor" red="0.41927871109999998" green="0.85189700130000001" blue="0.68716549869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="CN7-9I-eRZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="20"/>
+                    <state key="normal" title="확인">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PV-qC-KVB">
+                    <rect key="frame" x="127" y="202" width="66" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="66" id="f6d-ue-glg"/>
+                        <constraint firstAttribute="width" secondItem="9PV-qC-KVB" secondAttribute="height" multiplier="1:1" id="qlI-FI-DCu"/>
+                    </constraints>
+                    <state key="normal" image="map_filter_x_button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NVl-YF-Oa6" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" multiplier="1:2" id="6zz-xx-cKN"/>
+                <constraint firstItem="yMj-KG-yJY" firstAttribute="leading" secondItem="9Tg-Dk-51X" secondAttribute="leading" id="9vY-BK-M7s"/>
+                <constraint firstItem="9PV-qC-KVB" firstAttribute="width" secondItem="9PV-qC-KVB" secondAttribute="height" multiplier="1:1" id="AQP-nH-CsK"/>
+                <constraint firstItem="Iqz-hi-C5g" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" multiplier="1.5:1" id="Eey-t4-Guf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="yMj-KG-yJY" secondAttribute="bottom" id="MNB-7U-Nw1"/>
+                <constraint firstItem="Iqz-hi-C5g" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1:2" id="OIr-jk-PD5"/>
+                <constraint firstAttribute="trailing" secondItem="9Tg-Dk-51X" secondAttribute="trailing" id="dQk-fn-698"/>
+                <constraint firstItem="yMj-KG-yJY" firstAttribute="trailing" secondItem="9Tg-Dk-51X" secondAttribute="trailing" id="jpe-KL-Nwr"/>
+                <constraint firstItem="9PV-qC-KVB" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="pPs-eL-xVO"/>
+                <constraint firstItem="yMj-KG-yJY" firstAttribute="top" secondItem="9Tg-Dk-51X" secondAttribute="bottom" id="pk7-Lx-662"/>
+                <constraint firstItem="9Tg-Dk-51X" firstAttribute="top" secondItem="9PV-qC-KVB" secondAttribute="bottom" constant="21" id="qEo-KS-ovt"/>
+                <constraint firstItem="9Tg-Dk-51X" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="y8Q-Hl-hX6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="cafeBtn" destination="nCl-TB-oHS" id="mV3-Fl-lvB"/>
+                <outlet property="cancleBtn" destination="9PV-qC-KVB" id="Ja0-ql-nbE"/>
+                <outlet property="etcBtn" destination="r3a-gS-6DK" id="EEM-aS-luQ"/>
+                <outlet property="hotplaceBtn" destination="JIa-hN-pVL" id="IYu-H7-tl4"/>
+                <outlet property="okBtn" destination="yMj-KG-yJY" id="Hq7-Kd-se1"/>
+                <outlet property="popularBtn" destination="NVl-YF-Oa6" id="AxF-A3-bri"/>
+                <outlet property="recentBtn" destination="Iqz-hi-C5g" id="BZn-yP-kNb"/>
+                <outlet property="restaurantBtn" destination="gJG-7X-Tgg" id="OOI-jH-eBU"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="map_filter_cafe_gray" width="65" height="65"/>
+        <image name="map_filter_etc_gray" width="65" height="65"/>
+        <image name="map_filter_hotplace_gray" width="65" height="65"/>
+        <image name="map_filter_restaurant_gray" width="65" height="65"/>
+        <image name="map_filter_x_button" width="66" height="66"/>
+    </resources>
+</document>

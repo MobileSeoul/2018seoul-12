@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/search_spot_view_more_act_rv_item_btn"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/search_spot_view_more_act_rv_item_iv"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:src="@drawable/category_list_blackpink_img"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/search_spot_view_more_act_rv_item_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@+id/search_spot_view_more_act_rv_item_iv"
+        android:text="방탄삼겹살"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="16dp"
+        android:textColor="#323232"
+        android:fontFamily="@font/nanumsquareotf_bold"
+        />
+
+    <TextView
+        android:id="@+id/search_spot_view_more_act_rv_item_sub_text_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_spot_view_more_act_rv_item_title_tv"
+        android:layout_toRightOf="@+id/search_spot_view_more_act_rv_item_iv"
+        android:text="방탄소년단의 고기 맛집"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="7dp"
+        android:textColor="#707070"
+        android:textSize="13dp"
+        android:fontFamily="@font/nanumsquareotf_regular"
+        />
+
+    <RelativeLayout
+        android:id="@+id/search_spot_view_more_act_rv_item_address_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_below="@+id/search_spot_view_more_act_rv_item_sub_text_tv"
+        android:layout_toRightOf="@+id/search_spot_view_more_act_rv_item_iv"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp">
+        <ImageView
+            android:id="@+id/search_spot_view_more_act_rv_item_address_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_page_place_result_spot_icon"
+            android:layout_centerVertical="true"
+            android:tint="#C0C0C0"
+            android:background="@drawable/rv_item_search_act_hash_tag_box_shape"/>
+
+        <TextView
+            android:id="@+id/search_spot_view_more_act_rv_item_address_tv"
+            android:layout_width="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_height="wrap_content"
+            android:text="용산구 · 숙대입구역"
+            android:layout_toRightOf="@+id/search_spot_view_more_act_rv_item_address_iv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:textSize="12dp"
+            android:textColor="#C0C0C0"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_spot_view_more_act_rv_item_address_rl"
+        android:layout_toRightOf="@+id/search_spot_view_more_act_rv_item_iv"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp">
+        <ImageView
+            android:id="@+id/search_spot_view_more_act_rv_item_sub_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_page_place_result_scrap_icon"
+            android:layout_centerVertical="true"
+            android:tint="#C0C0C0"/>
+
+        <TextView
+            android:id="@+id/search_spot_view_more_act_rv_item_sub_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,175"
+            android:layout_toRightOf="@+id/search_spot_view_more_act_rv_item_sub_iv"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:textSize="12dp"
+            android:textColor="#C0C0C0"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E0E0E0"
+        android:layout_below="@+id/search_spot_view_more_act_rv_item_iv"
+        ></View>
+
+</RelativeLayout>

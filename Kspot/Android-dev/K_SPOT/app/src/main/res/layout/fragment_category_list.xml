@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.CategoryPageFragment">
+
+    <!--Top Bar-->
+    <RelativeLayout
+        android:id="@+id/category_list_fragment_top_bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <RelativeLayout
+            android:background="?android:selectableItemBackground"
+            android:id="@+id/category_list_fragment_translation_btn"
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:src="@drawable/translation_icon" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kspot_logo"
+            android:layout_centerInParent="true"/>
+
+
+
+        <RelativeLayout
+            android:background="?android:selectableItemBackground"
+            android:id="@+id/category_list_fragment_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_icon"
+                android:layout_margin="8dp"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/category_list_fragment_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@+id/category_list_fragment_top_bar_rl"
+        app:tabIndicatorColor="#40D39F"
+        app:tabIndicatorHeight="3dp">
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/category_list_fragment_viewpager"
+        android:layout_below="@+id/category_list_fragment_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+
+
+    <!--연예인, 방송 탭바-->
+    <LinearLayout
+        android:id="@+id/category_list_fragment_tap_bar_rl"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/category_list_fragment_top_bar_rl"
+        android:orientation="horizontal">
+
+        <!--연예인 단-->
+        <RelativeLayout
+            android:id="@+id/category_list_fragment_celebrity_tab_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50">
+            <TextView
+                android:id="@+id/category_list_fragment_celebrity_tab_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="연예인"
+                android:textSize="16dp"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                android:textColor="#40D39F"/>
+
+            <View
+                android:id="@+id/category_list_fragment_celebrity_tab_under_bar"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#40D39F" />
+        </RelativeLayout>
+
+        <!--방송단-->
+        <RelativeLayout
+            android:id="@+id/category_list_fragment_broadcast_tab_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50">
+            <TextView
+                android:id="@+id/category_list_fragment_broadcast_tab_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="방송"
+                android:textSize="16dp"
+                android:fontFamily="@font/nanumsquareotf_bold"
+                android:textColor="#414141"/>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/category_list_fragment_broadcast_tab_under_bar"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#40D39F" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/category_list_fragment_tap_bar_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/category_list_fragment_tap_bar_rl"></android.support.v7.widget.RecyclerView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:visibility="gone"
+        android:layout_width="78dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FFFFFF"
+        android:src="@drawable/board_write_floating_btn">
+    </android.support.design.widget.FloatingActionButton>
+
+
+</RelativeLayout>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout_focus"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+    <!--백버튼-->
+    <RelativeLayout
+        android:id="@+id/search_act_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="13dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/category_back_arrow"
+            android:layout_margin="8dp"/>
+    </RelativeLayout>
+
+    <!--무엇을 찾으시나요?-->
+    <TextView
+        android:id="@+id/search_act_what_search_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_act_back_btn"
+        android:text="무엇을 찾으시나요?"
+        android:textSize="22dp"
+        android:textColor="#5E5E5E"
+        android:fontFamily="@font/nanumsquareotf_bold"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="55dp"/>
+
+
+    <!--editText단-->
+    <RelativeLayout
+        android:id="@+id/search_act_search_edit_text_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_act_what_search_tv"
+        android:layout_marginTop="54dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        >
+
+        <EditText
+            android:id="@+id/search_act_search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="검색어를 입력해주세요."
+            android:textColorHint="#C5C5C5"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:fontFamily="@font/nanumsquareotf_bold"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:tint="#C5C5C5"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="3dp"
+            />
+
+    </RelativeLayout>
+
+    <!--연예인단-->
+    <TextView
+        android:id="@+id/search_act_search_recommend_celeb_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:text="연예인"
+        android:textColor="#5E5E5E"
+        android:textSize="14dp"
+        android:fontFamily="@font/nanumsquareotf_bold"
+        android:layout_below="@+id/search_act_search_edit_text_rl"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="16dp"/>
+
+    <HorizontalScrollView
+        android:id="@+id/search_act_search_recommend_celeb_horizontalScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none"
+        android:layout_below="@+id/search_act_search_recommend_celeb_tv">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:id="@+id/search_act_search_recommend_celeb_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/rv_item_search_act_hash_tag_box_shape"
+                >
+
+                <TextView
+                    android:id="@+id/search_act_search_recommend_celeb_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:textColor="#757575"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanumsquareotf_regular"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/search_act_search_recommend_celeb_rl2"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:layout_toRightOf="@+id/search_act_search_recommend_celeb_rl"
+                android:layout_marginLeft="11dp"
+                android:background="@drawable/rv_item_search_act_hash_tag_box_shape"
+                >
+
+                <TextView
+                    android:id="@+id/search_act_search_recommend_celeb_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:textColor="#757575"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanumsquareotf_regular"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/search_act_search_recommend_celeb_rv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="27dp"-->
+        <!--android:layout_below="@+id/search_act_search_recommend_celeb_tv"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--&gt;-->
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+    <!--방송단-->
+    <TextView
+        android:id="@+id/search_act_search_broadcast_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="방송"
+        android:textColor="#5E5E5E"
+        android:textSize="14dp"
+        android:fontFamily="@font/nanumsquareotf_bold"
+        android:layout_below="@+id/search_act_search_recommend_celeb_horizontalScroll"
+        android:layout_marginTop="29dp"
+        android:layout_marginLeft="16dp"/>
+
+    <HorizontalScrollView
+        android:id="@+id/search_act_search_recommend_broadcast_horizontalScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@+id/search_act_search_broadcast_tv"
+        android:layout_marginTop="16dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:id="@+id/search_act_search_recommend_broadcast_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/search_act_search_broadcast_tv"
+                android:background="@drawable/rv_item_search_act_hash_tag_box_shape"
+                >
+
+                <TextView
+                    android:id="@+id/search_act_search_recommend_broadcast_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:textColor="#757575"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanumsquareotf_regular"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/search_act_search_recommend_broadcast_rl2"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:layout_below="@+id/search_act_search_broadcast_tv"
+                android:layout_toRightOf="@+id/search_act_search_recommend_broadcast_rl"
+                android:layout_marginLeft="11dp"
+                android:background="@drawable/rv_item_search_act_hash_tag_box_shape"
+                >
+
+                <TextView
+                    android:id="@+id/search_act_search_recommend_broadcast_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:textColor="#757575"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanumsquareotf_regular"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/search_act_search_recommend_broadcast_rl3"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:layout_below="@+id/search_act_search_broadcast_tv"
+                android:layout_toRightOf="@+id/search_act_search_recommend_broadcast_rl2"
+                android:layout_marginLeft="11dp"
+                android:background="@drawable/rv_item_search_act_hash_tag_box_shape"
+                >
+
+                <TextView
+                    android:id="@+id/search_act_search_recommend_broadcast_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:textColor="#757575"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanumsquareotf_regular"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/search_act_search_recommend_broadcast_rv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="27dp"-->
+        <!--android:layout_below="@+id/search_act_search_broadcast_tv"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--&gt;-->
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+    <!--이벤트단-->
+    <TextView
+        android:id="@+id/search_act_search_event_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이벤트"
+        android:textColor="#5E5E5E"
+        android:textSize="14dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/nanumsquareotf_bold"
+        android:layout_below="@+id/search_act_search_recommend_broadcast_horizontalScroll"
+        android:layout_marginTop="29dp"/>
+
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/search_act_search_event_tv">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/search_act_search_recommend_event_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_below="@+id/search_act_search_event_tv"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/rv_item_search_act_hash_tag_box_shape"
+                >
+
+                <TextView
+                    android:id="@+id/search_act_search_recommend_event_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:textColor="#757575"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanumsquareotf_regular"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/search_act_search_recommend_event_rl2"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:layout_below="@+id/search_act_search_event_tv"
+                android:layout_toRightOf="@+id/search_act_search_recommend_event_rl"
+                android:layout_marginLeft="11dp"
+                android:background="@drawable/rv_item_search_act_hash_tag_box_shape"
+                >
+
+
+                <TextView
+                    android:id="@+id/search_act_search_recommend_event_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:textColor="#757575"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nanumsquareotf_regular"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/search_act_search_recommend_event_rv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="27dp"-->
+        <!--android:layout_below="@+id/search_act_search_event_tv"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--&gt;-->
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+
+    <RelativeLayout
+        style="@android:style/ButtonBar"
+        android:id="@+id/search_act_search_btn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/serach_btn">
+
+        <TextView
+            android:id="@+id/search_act_search_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색하기"
+            android:textSize="19dp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>

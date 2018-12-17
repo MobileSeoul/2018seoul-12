@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SpotViewMoreActivity"
+    android:id="@+id/ddfld"
+    android:background="#FFFFFF"
+    >
+
+    <ScrollView
+        android:id="@+id/spot_view_more_act_scroll_view"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--전체뷰-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <!--ViewPagerView-->
+                <RelativeLayout
+                    android:id="@+id/spot_view_more_act_viewpager_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--뷰페이저-->
+                    <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+                        android:id="@+id/spot_view_more_act_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="224dp"
+                        android:background="#FFFFFF" />
+
+                    <!--ViewPager 페이지 표시-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp">
+
+                        <TextView
+                            android:id="@+id/spot_view_more_act_viewpager_now_page_num_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/nanumsquareotf_regular"
+                            android:text="1"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/spot_view_more_act_viewpager_temp_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_toRightOf="@+id/spot_view_more_act_viewpager_now_page_num_tv"
+                            android:fontFamily="@font/nanumsquareotf_regular"
+                            android:text="/"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/spot_view_more_act_viewpager_all_page_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_toRightOf="@+id/spot_view_more_act_viewpager_temp_tv"
+                            android:fontFamily="@font/nanumsquareotf_regular"
+                            android:text="20"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <!--서울 남산 타워, 지하철 뷰-->
+                <RelativeLayout
+                    android:id="@+id/spot_view_more_act_spot_info_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spot_view_more_act_viewpager_rl">
+
+                    <!--장소명과 별점-->
+                    <RelativeLayout
+                        android:id="@+id/spot_view_more_act_spot_title_rl"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="32dp">
+
+                        <!--장소 이름-->
+                        <TextView
+                            android:id="@+id/spot_view_more_act_spot_title_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/nanumsquareotf_bold"
+                            android:text="서울남산타워"
+                            android:textColor="#323232"
+                            android:textSize="21dp" />
+
+                        <ImageView
+                            android:id="@+id/spot_view_more_act_spot_star_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="12dp"
+                            android:layout_toRightOf="@+id/spot_view_more_act_spot_title_tv"
+                            android:src="@drawable/category_top_star_icon_green" />
+
+                        <!--별점-->
+                        <TextView
+                            android:id="@+id/spot_view_more_act_spot_review_num_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="4dp"
+                            android:layout_toRightOf="@+id/spot_view_more_act_spot_star_iv"
+                            android:fontFamily="@font/nanumsquareotf_regular"
+                            android:text="4.6"
+                            android:textColor="#C0C0C0"
+                            android:textSize="11dp" />
+                    </RelativeLayout>
+
+                    <!--장소명 밑 간단 설명-->
+                    <TextView
+                        android:layout_marginHorizontal="16dp"
+                        android:id="@+id/spot_view_more_act_spot_semi_info_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spot_view_more_act_spot_title_rl"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/nanumsquareotf_regular"
+                        android:text="-"
+                        android:gravity="center_horizontal"
+                        android:textSize="11dp" />
+
+                    <!--주소아이콘과 주소-->
+                    <RelativeLayout
+                        android:id="@+id/spot_view_more_act_spot_address_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spot_view_more_act_spot_semi_info_tv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginHorizontal="16dp">
+
+                        <ImageView
+                            android:id="@+id/spot_view_more_act_spot_address_icon_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/category_viewmore_map_icon" />
+
+                        <TextView
+                            android:id="@+id/spot_view_more_act_spot_address_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="6dp"
+                            android:layout_toRightOf="@+id/spot_view_more_act_spot_address_icon_iv"
+                            android:fontFamily="@font/nanumsquareotf_bold"
+                            android:text="-"
+                            android:textColor="#707070"
+                            android:textSize="11dp"
+                            android:gravity="center_horizontal"/>
+                    </RelativeLayout>
+
+                    <!--지하철 설명-->
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/spot_view_more_act_spot_subway_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spot_view_more_act_spot_address_rl"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="28dp">
+
+                        <!--지하철 노선 색깔-->
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout"
+                            android:layout_width="280dp"
+                            android:layout_height="32dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <RelativeLayout
+                                android:id="@+id/line_spot_view_more_subway_straight"
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginHorizontal="3dp"
+                                android:background="#259BE7" />
+
+                            <RelativeLayout
+                                android:id="@+id/line_spot_view_more_subway_box"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/subline_main_round_subway_shape">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginHorizontal="20dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <RelativeLayout
+                                        android:id="@+id/spot_view_more_act_spot_station_number_round"
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:layout_marginRight="6dp"
+                                        android:background="@drawable/subline_round_subway_shape">
+
+                                        <TextView
+                                            android:id="@+id/spot_view_more_act_spot_station_number_tv"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:layout_centerInParent="true"
+                                            android:fontFamily="@font/nanumsquareotf_bold"
+                                            android:text="4"
+                                            android:textColor="#FFFFFF"
+                                            android:textSize="10dp" />
+
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/spot_view_more_act_spot_station_name_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:fontFamily="@font/nanumsquareotf_bold"
+                                        android:text="동대문 역사 공원"
+                                        android:textColor="#323232"
+                                        android:textSize="12dp" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/gray_round_subway_shape">
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/gray_round_subway_shape">
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/spot_view_more_act_spot_left_station_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="293dp"
+                            android:layout_marginStart="26dp"
+                            android:layout_marginTop="48dp"
+                            android:fontFamily="@font/nanumsquareotf_regular"
+                            android:text="회현역"
+                            android:textColor="#323232"
+                            android:textSize="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--지하철 오른쪽역-->
+                        <TextView
+                            android:id="@+id/spot_view_more_act_spot_right_station_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="26dp"
+                            android:layout_marginStart="293dp"
+                            android:layout_marginTop="48dp"
+                            android:fontFamily="@font/nanumsquareotf_regular"
+                            android:text="회현"
+                            android:textColor="#323232"
+                            android:textSize="12dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.25dp"
+                    android:layout_below="@+id/spot_view_more_act_spot_info_rl"
+                    android:layout_marginTop="24dp"
+                    android:background="#707070" />
+
+                <!--관련 연예인/방송-->
+                <RelativeLayout
+                    android:id="@+id/spot_view_more_act_relative_celev_info_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:layout_below="@+id/spot_view_more_act_spot_info_rl"
+                    android:layout_marginTop="24dp">
+
+                    <!--관련 연예인 방송 TextView-->
+                    <TextView
+                        android:id="@+id/spot_view_more_act_relative_celev_info_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="32dp"
+                        android:fontFamily="@font/nanumsquareotf_bold"
+                        android:text="관련 연예인/방송"
+                        android:textColor="#323232"
+                        android:textSize="15dp" />
+
+                    <!--관련 연예인 방송 수 TextView-->
+                    <TextView
+                        android:id="@+id/spot_view_more_act_relative_celev_num_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="33dp"
+                        android:layout_toRightOf="@+id/spot_view_more_act_relative_celev_info_tv"
+                        android:fontFamily="@font/nanumsquareotf_light"
+                        android:text="0개"
+                        android:textColor="#323232"
+                        android:textSize="15dp" />
+
+                    <!--관련 연예인 방송 리사이클러 뷰-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/spot_view_more_act_relative_celev_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spot_view_more_act_relative_celev_num_tv"
+                        android:layout_marginTop="36dp">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.25dp"
+                    android:layout_below="@+id/spot_view_more_act_relative_celev_info_rl"
+                    android:background="#707070" />
+
+                <!--리뷰 정보 Relative View-->
+                <RelativeLayout
+                    android:id="@+id/spot_view_more_act_review_info_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spot_view_more_act_relative_celev_info_rl">
+
+                    <!--리뷰 30,256개 모두보기-->
+                    <RelativeLayout
+                        android:id="@+id/spot_view_more_act_review_top_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="41dp">
+
+                        <!--리뷰-->
+                        <TextView
+                            android:id="@+id/spot_view_more_act_review_info_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/nanumsquareotf_bold"
+                            android:text="리뷰"
+                            android:textColor="#323232"
+                            android:textSize="15dp" />
+
+                        <!--30256개-->
+                        <TextView
+                            android:id="@+id/spot_view_more_act_review_num_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="12dp"
+                            android:layout_toRightOf="@+id/spot_view_more_act_review_info_tv"
+                            android:fontFamily="@font/nanumsquareotf_light"
+                            android:text="0개"
+                            android:textColor="#323232"
+                            android:textSize="15dp" />
+
+                        <!--모두보기 버튼-->
+                        <RelativeLayout
+                            android:id="@+id/spot_view_more_act_all_review_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="8dp">
+
+                            <TextView
+                                android:id="@+id/spot_view_more_act_all_review_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:fontFamily="@font/nanumsquareotf_bold"
+                                android:text="모두보기"
+                                android:textColor="#40D39F"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <!--별점 뷰 RealativeLayout-->
+                    <RelativeLayout
+                        android:id="@+id/spot_view_more_act_review_star_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spot_view_more_act_review_top_rl"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="20dp">
+                        <!--별점 뷰-->
+                        <LinearLayout
+                            android:id="@+id/spot_view_more_act_review_star_ll"
+                            android:layout_width="129dp"
+                            android:layout_height="21dp"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"></LinearLayout>
+
+                        <TextView
+                            android:id="@+id/spot_view_more_act_review_star_num_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@+id/spot_view_more_act_review_star_ll"
+                            android:fontFamily="@font/nanumsquareotf_regular"
+                            android:text="0.0"
+                            android:textColor="#323232"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+
+                            android:layout_toRightOf="@+id/spot_view_more_act_review_star_num_tv"
+                            android:fontFamily="@font/nanumsquareotf_regular"
+                            android:text="/5"
+                            android:textColor="#E0E0E0"
+                            android:textSize="18dp" />
+                    </RelativeLayout>
+
+                    <!--리뷰 box shape-->
+                    <RelativeLayout
+                        android:id="@+id/spot_view_more_act_review_box_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spot_view_more_act_review_star_rl"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="38dp"
+                        android:background="@drawable/spot_view_more_act_review_box_shape"
+                        android:elevation="2dp"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/spot_view_more_act_review_result_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="198dp"
+                            android:visibility="gone">
+
+                            <!--리뷰 제목(수정필요: 글 한 줄로 잘라주는 기능)-->
+                            <TextView
+                                android:id="@+id/spot_view_more_act_review_box_title_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="23dp"
+                                android:layout_marginTop="30dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/nanumsquareotf_bold"
+                                android:maxLines="1"
+                                android:text="밤에 야경보러 갔는데ㅇㅇㅇ"
+                                android:textColor="#323232"
+                                android:textSize="15dp" />
+
+                            <!--리뷰 내용-->
+                            <TextView
+                                android:id="@+id/spot_view_more_act_review_box_explain_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/spot_view_more_act_review_box_picture_iv"
+                                android:layout_marginRight="43dp"
+                                android:layout_below="@+id/spot_view_more_act_review_box_title_tv"
+                                android:layout_marginLeft="23dp"
+                                android:layout_marginTop="10dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/nanumsquareotf_regular"
+                                android:maxLines="4"
+                                android:text="전망도 너무 예쁘고 좋았어요ㅜㅜ다음엔 꼭 남자친구랑 가고 싶어요^^,,,,방탄LOVE~!ㄷㅂㅈㄱㅂㅈㄷㄱㅂㅈㄷㄱㅂㅈㄷㄱㅂㅈㄷㄱㅈㄷㅂㄱ"
+                                android:textColor="#707070"
+                                android:textSize="12dp" />
+
+                            <!--리뷰사진-->
+                            <ImageView
+                                android:id="@+id/spot_view_more_act_review_box_picture_iv"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="23dp"
+                                android:layout_marginTop="30dp"
+                                android:src="@color/colorAccent" />
+
+                            <!--리뷰 별점-->
+                            <LinearLayout
+                                android:id="@+id/spot_view_more_act_review_box_star_ll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:layout_marginLeft="23dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="8dp"
+                                android:layout_above="@+id/spot_view_more_act_review_box_writer_date_tv"></LinearLayout>
+
+                            <TextView
+                                android:id="@+id/spot_view_more_act_review_box_writer_date_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="32dp"
+                                android:layout_marginLeft="23dp"
+                                android:layout_alignParentBottom="true"
+                                android:fontFamily="@font/nanumsquareotf_regular"
+                                android:text="BTSlove · 2018-08-31"
+                                android:textColor="#C0C0C0"
+                                android:textSize="9dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/spot_view_more_act_review_no_result_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="198dp"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/spot_view_more_act_review_no_result_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="작성된 리뷰가 없습니다. \n 첫 리뷰를 작성해주세요 :)"
+                                android:lineSpacingExtra="7dp"
+                                android:textSize="15dp"
+                                android:gravity="center"
+                                android:textColor="#C0C0C0"
+                                android:fontFamily="@font/nanumsquareotf_bold"/>
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+                    <!--리뷰쓰기 btn-->
+
+                    <RelativeLayout
+                        android:id="@+id/spot_view_more_act_review_write_box_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_below="@+id/spot_view_more_act_review_box_btn"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="37dp"
+
+                        android:background="@drawable/spot_view_more_acr_write_review_box_shape">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <ImageView
+                                android:id="@+id/spot_view_more_act_review_write_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/category_review_write_icon" />
+
+                            <TextView
+                                android:id="@+id/spot_view_more_act_review_write_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@+id/spot_view_more_act_review_write_btn"
+                                android:fontFamily="@font/nanumsquareotf_regular"
+                                android:text="리뷰쓰기"
+                                android:textColor="#40D39F"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <!--지도 뷰-->
+                <RelativeLayout
+                    android:id="@+id/spot_view_more_act_map_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="117dp"
+                    android:layout_below="@+id/spot_view_more_act_review_info_rl"
+                    android:layout_marginTop="41dp"
+                    android:background="@drawable/google_back_map_img">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="18dp"
+                        android:background="@drawable/spot_view_more_google_map_all_btn_shape">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true">
+
+                            <LinearLayout
+                                android:id="@+id/spot_view_more_google_map_box"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="14dp"
+                                    android:layout_height="19dp"
+                                    android:src="@drawable/map_page_spot_icon" />
+
+                                <TextView
+                                    android:id="@+id/tv_spot_view_more_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="6dp"
+                                    android:fontFamily="@font/nanumsquareotf_bold"
+                                    android:text="주소"
+                                    android:textColor="#323232"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_spot_view_more_address_by_google_map"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/spot_view_more_google_map_box"
+                                android:layout_marginLeft="36dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/nanumsquareotf_light"
+                                android:text="구글맵으로 길찾기"
+                                android:textColor="#C0C0C0"
+                                android:textSize="9dp" />
+                        </RelativeLayout>
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:foreground="?android:selectableItemBackground"
+                            android:id="@+id/btn_spot_view_more_google_map_btn"
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/category_map_right_icon" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <!--오픈/마감 시간-->
+                <RelativeLayout
+                    android:id="@+id/spot_view_more_act_open_close_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spot_view_more_act_map_view"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="41dp">
+
+                    <!--오픈/마감 시간-->
+                    <TextView
+                        android:id="@+id/spot_view_more_act_open_close_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanumsquareotf_bold"
+                        android:text="오픈/마감 시간"
+                        android:textColor="#323232"
+                        android:textSize="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spot_view_more_act_open_close_tv"
+                        android:layout_marginTop="33dp"
+                        android:orientation="horizontal">
+                        <!--오픈 단-->
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/spot_view_more_act_open_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/nanumsquareotf_regular"
+                                android:text="오픈"
+                                android:textColor="#C0C0C0"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/spot_view_more_act_open_time_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/spot_view_more_act_open_tv"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:text="10:00" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.25dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginTop="6dp"
+                            android:background="#C0C0C0"></View>
+
+                        <!--마감단-->
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/spot_view_more_act_close_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/nanumsquareotf_regular"
+                                android:text="마감"
+                                android:textColor="#C0C0C0"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/spot_view_more_act_close_time_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/spot_view_more_act_close_tv"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:text="10:00"
+                                android:textSize="14dp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <!--전화번호 버튼-->
+                <RelativeLayout
+                    android:id="@+id/spot_view_more_act_phone_num_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_below="@+id/spot_view_more_act_open_close_rl"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="43dp"
+                    android:background="@drawable/spot_view_more_act_phone_num_box_shape">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/spot_view_more_act_phone_num_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/category_email_icon" />
+
+                        <TextView
+                            android:id="@+id/spot_view_more_act_phone_num_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/spot_view_more_act_phone_num_iv"
+                            android:fontFamily="@font/nanumsquareotf_regular"
+                            android:text="010-1234-5678"
+                            android:textColor="#323232"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!--최상단 이동 버튼-->
+                <RelativeLayout
+                    android:id="@+id/spot_view_more_act_move_top_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spot_view_more_act_phone_num_btn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="49dp"
+                    android:layout_marginTop="98dp">
+
+                    <ImageView
+                        android:id="@+id/spot_view_more_act_move_top_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/category_top_btn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spot_view_more_act_move_top_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/nanumsquareotf_regular"
+                        android:text="TOP"
+                        android:textColor="#C0C0C0"
+                        android:textSize="12dp" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <!--상단(백버튼, 스크랩버튼)-->
+    <RelativeLayout
+        android:id="@+id/spot_view_more_act_top_bar_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="21dp"
+        android:background="#00000000"
+        >
+
+        <!--백버튼-->
+        <RelativeLayout
+            android:id="@+id/spot_view_more_act_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true">
+            <!--수정필요-->
+            <ImageView
+                android:id="@+id/spot_view_more_act_back_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@drawable/category_back_arrow"
+                android:tint="#FFFFFF"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spot_view_more_act_scrap_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            >
+
+            <!--수정 필요-->
+            <ImageView
+                android:id="@+id/spot_view_more_act_scrap_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:src="@drawable/category_scrap_btn" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/spot_view_more_act_scrap_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/spot_view_more_act_scrap_btn"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:textColor="#FFFFFF"
+            android:text="23,341"
+            android:textSize="14dp" />
+
+        <View
+            android:id="@+id/spot_view_more_act_top_bar_bottom_line"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#FFFFFF"
+            android:layout_alignParentBottom="true"
+            android:elevation="3dp"></View>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

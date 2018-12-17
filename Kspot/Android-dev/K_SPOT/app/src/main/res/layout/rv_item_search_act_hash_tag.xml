@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/search_act_rv_item_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:background="@drawable/rv_item_search_act_hash_tag_box_shape"
+            >
+
+            <TextView
+                android:id="@+id/search_act_rv_item_temp_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:textColor="#757575"
+                android:textSize="12dp"
+                android:fontFamily="@font/nanumsquareotf_regular"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

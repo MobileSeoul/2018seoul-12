@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="248dp"
+    android:layout_height="168dp"
+    android:layout_marginLeft="16dp">
+
+    <RelativeLayout
+        android:id="@+id/my_page_frag_rv_item_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/my_page_frag_rv_item_img_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/category_list_blackpink_img"
+            android:background="@drawable/rv_item_review_more_act_box_shape"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/my_page_frag_rv_item_background">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp">
+
+                <TextView
+                    android:id="@+id/my_page_frag_rv_item_english_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="@font/nanumsquareotf_bold"
+                    android:text="BLACK PINK"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/my_page_frag_rv_item_hangeul_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="블랙핑크"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

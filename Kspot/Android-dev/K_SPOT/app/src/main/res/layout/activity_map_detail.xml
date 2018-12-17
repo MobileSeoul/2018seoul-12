@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MapDetailActivity" >
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="31dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/btn_map_detail_act_search"
+            android:background="@drawable/shape_map_bottom_box"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginBottom="3dp">
+            <fragment
+                android:id="@+id/fm_map_detail_act_place_autocomplete"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                />
+            <ImageView
+                android:visibility="invisible"
+                android:layout_centerInParent="true"
+                android:src="@drawable/google_map_search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/btn_map_detail_act_gps"
+            android:background="@drawable/shape_map_bottom_box"
+            android:layout_width="52dp"
+            android:layout_height="52dp">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@drawable/google_map_spot_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    
+    <RelativeLayout
+        android:id="@+id/btn_map_page_setting_spot"
+        android:background="#40D39F"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="69dp">
+        <TextView
+            android:id="@+id/tv_map_act_title"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:text="이 위치로 장소 설정"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

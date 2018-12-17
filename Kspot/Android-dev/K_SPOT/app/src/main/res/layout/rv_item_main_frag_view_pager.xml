@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/main_frag_rv_item_ll"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:foreground="?android:selectableItemBackground">
+    
+    <!--<RelativeLayout-->
+        <!--android:layout_width="138dp"-->
+        <!--android:layout_height="81dp"-->
+        <!--android:layout_marginLeft="32dp"-->
+        <!--&gt;-->
+        <!---->
+        <!--<TextView-->
+            <!--android:id="@+id/main_frag_rv_item_tv1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="안녕! \n오늘은"-->
+            <!--android:fontFamily="@font/nanumsquareotf_regular"-->
+            <!--android:textColor="#5E5E5E"-->
+            <!--android:textSize="22dp"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/main_frag_rv_item_tv2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/main_frag_rv_item_tv1"-->
+            <!--android:text="어디를 가볼까?"-->
+            <!--android:textColor="#5E5E5E"-->
+            <!--android:fontFamily="@font/nanumsquareotf_bold"-->
+            <!--android:textSize="22dp"-->
+            <!--/>-->
+    <!--</RelativeLayout>-->
+
+    <ImageView
+        android:id="@+id/main_frag_rv_item_iv"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

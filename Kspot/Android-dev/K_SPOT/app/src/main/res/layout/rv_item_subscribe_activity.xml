@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="61dp">
+    
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/subscribe_act_rv_item_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_centerVertical="true"
+        android:src="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/subscribe_act_rv_item_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="무너무너무너"
+        android:layout_toRightOf="@+id/subscribe_act_rv_item_iv"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:textSize="15dp"
+        android:textColor="#757575"
+        android:fontFamily="@font/nanumsquareotf_regular"/>
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/subscribe_act_rv_item_new_contents_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/selecteditem_dot"/>
+
+</RelativeLayout>

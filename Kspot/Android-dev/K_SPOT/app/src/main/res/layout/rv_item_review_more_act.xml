@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <!--제목-->
+    <TextView
+        android:id="@+id/review_more_act_rv_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanumsquareotf_bold"
+        android:text="밤에 야경보러 갔는데"
+        android:textColor="#323232"
+        android:textSize="18dp" />
+
+    <!--글 내용-->
+    <TextView
+        android:id="@+id/review_more_act_rv_item_content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/review_more_act_rv_item_title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/nanumsquareotf_regular"
+        android:text="전망도 너무 예쁘고 좋았어요ㅜㅜ 다음엔 꼭 남자친구랑 가고 싶어요^^,,,,방탄 LOVE~!"
+        android:textColor="#707070"
+        android:textSize="14dp" />
+
+    <!--이미지-->
+    <ImageView
+        android:id="@+id/review_more_act_rv_item_content_iv"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@+id/review_more_act_rv_item_content_tv"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="21dp"
+        android:src="@color/colorAccent"
+        android:scaleType="fitXY"/>
+
+    <!--별 점 동적으로 생성-->
+    <LinearLayout
+        android:id="@+id/review_more_act_rv_item_star_ll"
+        android:layout_width="90dp"
+        android:layout_height="15dp"
+        android:layout_below="@+id/review_more_act_rv_item_content_iv"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="21dp"
+        android:orientation="horizontal"></LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/review_more_act_rv_item_writer_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/review_more_act_rv_item_star_ll">
+
+        <!--Writer-->
+        <TextView
+            android:id="@+id/review_more_act_rv_item_writer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:text="BTSlove"
+            android:textColor="#C0C0C0"
+            android:textSize="12dp" />
+
+        <!--dot-->
+        <TextView
+            android:id="@+id/review_more_act_rv_item_dot_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/review_more_act_rv_item_writer_tv"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:text=" · "
+            android:textColor="#C0C0C0"
+            android:textSize="12dp" />
+
+        <!--date-->
+        <TextView
+            android:id="@+id/review_more_act_rv_item_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/review_more_act_rv_item_dot_tv"
+            android:fontFamily="@font/nanumsquareotf_regular"
+            android:text="2018-08-31"
+            android:textColor="#C0C0C0"
+            android:textSize="12dp" />
+
+        <!--기능 더보기 버튼-->
+        <RelativeLayout
+            android:id="@+id/review_more_act_rv_item_threedot_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@drawable/review_page_viewmore_threedot" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <!--밑에 라인-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:layout_below="@+id/review_more_act_rv_item_writer_rl"
+        android:layout_marginTop="21dp"
+        android:background="#707070" />
+
+    <!--이제부터 중요함-->
+    <!--기능 더보기 버튼 눌렀을 때 나오는-->
+    <!--신고 사유 박스-->
+    <RelativeLayout
+        android:id="@+id/review_more_act_rv_item_report_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/rv_item_review_more_act_box_shape"
+        android:elevation="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/nanumsquareotf_bold"
+                    android:text="신고 사유를 선택해주세요"
+                    android:textColor="#414141"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E0E0E0" />
+
+            <!--음란물btn-->
+            <RelativeLayout
+                android:id="@+id/review_more_act_rv_item_report_first_btn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/nanumsquareotf_regular"
+                    android:text="음란물"
+                    android:textColor="#414141"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E0E0E0" />
+
+            <!--사칭 및 사기 btn-->
+            <RelativeLayout
+                android:id="@+id/review_more_act_rv_item_report_second_btn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/nanumsquareotf_regular"
+                    android:text="사칭 및 사기"
+                    android:textColor="#414141"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E0E0E0" />
+            <!--허위 사실 유포 btn-->
+            <RelativeLayout
+                android:id="@+id/review_more_act_rv_item_report_third_btn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/nanumsquareotf_regular"
+                    android:text="허위사실유포"
+                    android:textColor="#414141"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E0E0E0" />
+
+            <!--상업적 광고 및 판매 btn-->
+            <RelativeLayout
+                android:id="@+id/review_more_act_rv_item_report_fourth_btn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/nanumsquareotf_regular"
+                    android:text="상업적 광고 및 판매"
+                    android:textColor="#414141"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E0E0E0" />
+
+            <!--욕설 및 불쾌감을 주는 표현-->
+            <RelativeLayout
+                android:id="@+id/review_more_act_rv_item_report_fifth_btn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/nanumsquareotf_regular"
+                    android:text="욕설 및 불쾌감을 주는 표현"
+                    android:textColor="#414141"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E0E0E0" />
+
+            <!--확인 btn-->
+            <RelativeLayout
+                android:id="@+id/review_more_act_rv_item_report_confirm_btn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/rv_item_review_more_act_btn_event"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/nanumsquareotf_bold"
+                    android:text="확인"
+                    android:textColor="#40D39F"
+                    android:textSize="14dp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--신고 접수 View-->
+    <RelativeLayout
+        android:id="@+id/review_more_act_rv_item_report_Receipt_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:background="@drawable/rv_item_review_more_act_box_shape">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:orientation="vertical"
+            >
+
+            <!--신고가 완료되었습니다-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/nanumsquareotf_bold"
+                    android:text="신고가 완료되었습니다."
+                    android:textColor="#414141"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#E0E0E0" />
+            <!--확인-->
+            <RelativeLayout
+                android:id="@+id/review_more_act_rv_item_report_Receipt_corfirm_btn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/rv_item_review_more_act_btn_event"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/nanumsquareotf_bold"
+                    android:text="확인"
+                    android:textColor="#40D39F"
+                    android:textSize="14dp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.MapPageFragment">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <ImageView
+                android:id="@+id/btn_map_page_translation"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/main_translation_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/kspot_logo"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:background="?android:selectableItemBackground"
+                android:id="@+id/btn_map_page_search"
+                android:layout_marginRight="8dp"
+                android:padding="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:background="?android:selectableItemBackground"
+                android:id="@+id/btn_map_page_my_spot"
+                android:padding="8dp"
+                android:layout_toLeftOf="@+id/btn_map_page_search"
+                android:src="@drawable/map_page_spot_icon"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/ns_map_page_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="56dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="370dp">
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/map_img"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_gangseo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/gangseo"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.081"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.531" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_yangcheon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/yangcheon"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.144"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.71" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_gulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/gulo"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.15"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.808" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_yeongdeungpo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/yeongdeungpo"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.31"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.697" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_geumcheon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/geumcheon"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.3"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.92" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_dongjag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/dongjag"
+                            app:layout_constraintHorizontal_bias="0.441"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.77" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_seocho"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/seocho"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.592"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.838" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_gangnam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/gangnam"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.725"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.793" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_songpa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/songpa"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.818"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.745" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_gangdong"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/gangdong"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.967"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.563" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_mapo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/mapo"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.33"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.55" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_yongsan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/yongsan"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.51"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.647" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_seongdong"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/seongdong"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.676"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.576" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_gwangjin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/gwangjin"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.792"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.59" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_junggu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/junggu"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.562"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.544" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_seodaemun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/seodaemun"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.394"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.495" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_eunpyeong"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/eunpyeong"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.372"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.337" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_jonglo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/jonglo"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.514"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.473" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_seongbug"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/seongbug"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.598"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.395" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_dongdaemun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/dongdaemun"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.705"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.473" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_junglang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/junglang"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.814"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.385" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_gangbug"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/gangbug"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.592"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.254" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_dobong"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/dobong"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.653"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.17" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_nowon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/nowon"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.77"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.25" />
+
+                        <ImageView
+                            android:id="@+id/btn_map_page_spot_gwanag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/gwanag"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView"
+                            app:layout_constraintHorizontal_bias="0.403"
+                            app:layout_constraintStart_toStartOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="@+id/imageView"
+                            app:layout_constraintVertical_bias="0.875" />
+
+                    </android.support.constraint.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/tv_map_page_message_select_location"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/nanumsquareotf_regular"
+                        android:text="보고싶은 지역을 선택해주세요"
+                        android:textColor="#C0C0C0"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:background="#F5F5F5"
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_marginTop="21dp"
+                        android:layout_marginBottom="18dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_map_page_subtitle"
+                            android:fontFamily="@font/nanumsquareotf_bold"
+                            android:text="강남구 K-spot"
+                            android:textColor="#323232"
+                            android:textSize="18dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:layout_marginLeft="8dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/map_kspot_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_map_page_my_around_k_spot"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false">
+                    </android.support.v7.widget.RecyclerView>
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardview_map_page_no_data_message"
+                        android:visibility="gone"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        app:cardCornerRadius="17dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/tv_map_page_no_data_message"
+                                android:layout_centerInParent="true"
+                                android:text="내 주변에 k-spot이 없습니다 :("
+                                android:textColor="#707070"
+                                android:textSize="13dp"
+                                android:fontFamily="@font/nanumsquareotf_regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_map_page_open_filtering"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="86dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/filter_floating_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl_map_page_open_filtering_backgound"
+        android:visibility="gone"
+        android:clickable="true"
+        android:background="#77000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_map_page_open_filtering_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/btn_map_page_close_filtering"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/map_page_filter_x_btn"
+            android:layout_above="@+id/ll_map_page_filtering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_map_page_filtering"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF">
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_marginHorizontal="12dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="280dp">
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp"
+                    android:gravity="center">
+                    <RelativeLayout
+                        android:background="?android:selectableItemBackground"
+                        android:id="@+id/btn_map_page_filter_is_popular"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_map_page_filter_is_popular"
+                            android:text="인기순"
+                            android:textColor="#40D39F"
+                            android:textSize="17dp"
+                            android:fontFamily="@font/nanumsquareotf_regular"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:background="#C0C0C0" />
+                    <RelativeLayout
+                        android:background="?android:selectableItemBackground"
+                        android:id="@+id/btn_map_page_filter_is_new"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_map_page_filter_is_new"
+                            android:text="최신순"
+                            android:textColor="#E0E0E0"
+                            android:textSize="17dp"
+                            android:fontFamily="@font/nanumsquareotf_regular"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.25dp"
+                    android:background="#C5C5C5"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+                    <TextView
+                        android:id="@+id/tv_map_page_filter_distance"
+                        android:layout_centerInParent="true"
+                        android:textColor="#40D39F"
+                        android:fontFamily="@font/nanumsquareotf_regular"
+                        android:textSize="17dp"
+                        android:text="1Km까지 설정"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:foreground="?android:selectableItemBackground"
+                        android:paddingRight="16dp"
+                        android:paddingVertical="8dp"
+                        android:id="@+id/btn_map_page_filter_distance_left"
+                        android:src="@drawable/map_page_filter_left_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <ImageView
+                        android:foreground="?android:selectableItemBackground"
+                        android:paddingLeft="16dp"
+                        android:paddingVertical="8dp"
+                        android:id="@+id/btn_map_page_filter_distance_right"
+                        android:src="@drawable/map_page_filter_right_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.25dp"
+                    android:background="#C5C5C5"/>
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/btn_map_page_filter_is_restaurant"
+                        android:layout_weight="1"
+                        android:src="@drawable/filter_restaurant_btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <ImageView
+                        android:id="@+id/btn_map_page_filter_is_cafe"
+                        android:layout_weight="1"
+                        android:src="@drawable/filter_cafe_btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <ImageView
+                        android:id="@+id/btn_map_page_filter_is_hot_place"
+                        android:layout_weight="1"
+                        android:src="@drawable/filter_hotplace_btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <ImageView
+                        android:id="@+id/btn_map_page_filter_is_event"
+                        android:layout_weight="1"
+                        android:src="@drawable/filter_event_btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <ImageView
+                        android:id="@+id/btn_map_page_filter_is_etc"
+                        android:layout_weight="1"
+                        android:src="@drawable/filter_etc_btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+
+                android:foreground="?android:selectableItemBackground"
+                android:id="@+id/btn_map_page_filter_apply_btn"
+                android:background="#40D39F"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <TextView
+                    android:id="@+id/tv_map_page_filter_apply_btn"
+                    android:layout_centerInParent="true"
+                    android:text="확인"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/nanumsquareotf_regular"
+                    android:textSize="19dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

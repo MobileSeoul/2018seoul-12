@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReviewMoreActivity"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true">
+
+    <!--탑바-->
+    <RelativeLayout
+        android:id="@+id/review_more_act_top_bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="53dp">
+
+        <RelativeLayout
+            android:id="@+id/review_more_act_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/category_back_arrow"
+                android:layout_margin="8dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/review_more_act_top_bar_under_line"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:elevation="3dp"
+            android:layout_alignParentBottom="true"
+            android:background="#F5F5F5"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/review_more_act_top_bar_rl"
+        >
+
+        <LinearLayout
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants">
+
+            <RelativeLayout
+                android:id="@+id/review_more_act_review_tv_bar_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="38dp">
+                <TextView
+                    android:id="@+id/review_more_act_review_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="리뷰"
+                    android:textColor="#323232"
+                    android:textSize="24dp"
+                    android:fontFamily="@font/nanumsquareotf_bold"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/review_more_act_review_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/review_more_act_review_tv"
+                    android:text="30,256개"
+                    android:textColor="#323232"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/nanumsquareotf_light"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="18dp">
+
+                <LinearLayout
+                    android:id="@+id/review_more_act_review_star_ll"
+                    android:layout_width="134dp"
+                    android:layout_height="22dp"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true"
+                    >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/review_more_act_score_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/review_more_act_review_star_ll"
+                    android:text="4.6"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="20dp"
+                    android:textColor="#323232"
+                    android:fontFamily="@font/nanumsquareotf_bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/review_more_act_score_tv"
+                    android:text="/5"
+                    android:layout_centerVertical="true"
+                    android:textSize="20dp"
+                    android:textColor="#E0E0E0"
+                    android:fontFamily="@font/nanumsquareotf_regular"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="37dp"
+                android:background="#F5F5F5"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/review_more_act_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:descendantFocusability="blocksDescendants"
+                android:nestedScrollingEnabled="true">
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/review_more_act_review_write_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/reveiw_page_write_floating_btn"
+            android:layout_margin="8dp"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>
